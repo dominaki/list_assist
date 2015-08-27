@@ -17,7 +17,7 @@
 
       <% @purchases.each do |purchase| %>
       <tr>
-    
+        <td><%= purchase.id %></td>
         <td><%= purchase.purchased_on %></td>
         <td><%= purchase.item_id %></td>
         <td><%= purchase.store_id %></td>
