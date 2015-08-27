@@ -16,6 +16,7 @@ class PurchasesController < ApplicationController
     @purchase.purchased_on = params[:purchased_on]
     @purchase.item_id = params[:item_id]
     @purchase.store_id = params[:store_id]
+    @purchase.user_id = params[:user_id]
 
     if @purchase.save
       redirect_to "/purchases", :notice => "Purchase created successfully."
