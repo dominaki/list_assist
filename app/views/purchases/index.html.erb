@@ -17,19 +17,20 @@
 
       <% @purchases.each do |purchase| %>
       <tr>
-        <td><%= purchase.id %></td>
         <td><%= purchase.purchased_on %></td>
-        <td><%= purchase.item_id %></td>
-        <td><%= purchase.store_id %></td>
+        <td><%= purchase.item.name %></td>
+        <td><%= purchase.store.name %></td>
+
         <td>
           <a href="/purchases/<%= purchase.id %>" class="btn btn-primary">Show</a>
           <a href="/purchases/<%= purchase.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_purchase/<%= purchase.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
-      <% end %>
+      
      
     </table>
+    <% end %>
   </div>
 </div>
 

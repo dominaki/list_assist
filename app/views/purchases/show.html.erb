@@ -9,10 +9,10 @@
       <dd><%= @purchase.purchased_on %></dd>
 
       <dt>Item</dt>
-      <dd><%= @purchase.item.name %></dd>
+      <dd><%= @purchase.item_id %></dd>
 
       <dt>Store</dt>
-      <dd><%= @purchase.store.name %></dd>
+      <dd><<%= select_tag(:store_id, options_from_collection_for_select(Store.all, :id, :name, @store ), :class => "form-control") %></dd>
 
     </dl>
 
