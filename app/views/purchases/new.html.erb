@@ -17,13 +17,14 @@
     <form action="/create_purchase" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <input name="user_id" type="hidden" value="<%= current_user.id %>">
+      
 
       <!-- Label and input for purchased_on -->
       <div class="form-group">
         <label for="purchased_on" class="control-label">
           Purchased on
         </label>
-
         <input type="text" id="purchased_on" name="purchased_on" placeholder="Purchased on" class="form-control" value="<%= @purchase.purchased_on %>">
       </div>
 
